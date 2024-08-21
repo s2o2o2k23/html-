@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 슬라이드1</title>
+    <script src="./jquery-1.12.4.js"></script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .inner {
+            position: relative;
+            width: 1200px;
+            height: 300px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slide_wrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            width: 1200px;
+
+        }
+
+        .slide_itm {
+
+            flex: 0 0 1200px;
+            height: 300px;
+        }
+
+        .itm01 {
+            background: #f00;
+        }
+
+        .itm02 {
+            background: #ff0;
+        }
+
+        .itm03 {
+            background: #00f;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main_slide">
+        <div class="inner">
+            <div class="slide_wrap">
+                <div class="slide_itm itm01">01</div>
+                <div class="slide_itm itm02">02</div>
+                <div class="slide_itm itm03">03</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(function () {
+
+            let n = 1;
+
+            function slide() {
+                $('.slide_wrap').animate({
+                    left: -1200 * n
+                }, 400);
+                n = n + 1;
+
+                if (n == 3) {
+                    n = 0
+                }
+
+            }
+
+
+            //slide();
+
+            setInterval(slide, 3000)
+
+
+        })
+    </script>
+</body>
+
+</html>

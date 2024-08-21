@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html06</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="/">html 배우기</a>
+        </h1>
+    </header>
+    <main>
+        <section class="default">
+            <h2>html 배우기 - 표를 만드는 테그</h2>
+            <p>
+                display table 속성을 가지고 표를 만드는 테그이다.<br>
+                figure 테그로 쌀 수 있으나 필수는 아니다.
+            </p>
+
+            <figure>
+                <table>
+                    <caption>표의 설명</caption>
+                    <colgroup>
+                        <col style="width: 100px" />
+                        <col />
+                        <col />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>title01</th>
+                            <th>title02</th>
+                            <th>title03</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td>02</td>
+                            <td>03</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">01</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>total</td>
+                            <td>total</td>
+                            <td>total</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </figure>
+
+
+        </section>
+    </main>
+    <footer>
+        <address>&copy; 이창훈.</address>
+    </footer>
+</body>
+
+</html>
